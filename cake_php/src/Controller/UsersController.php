@@ -92,13 +92,6 @@ class UsersController extends AppController
      */
     public function edit($id = null)
     {
-        // $session = $this->request->getSession();
-        // if ($session->read('email') != null) {
-        // } else {
-        //     $this->redirect(['action' => 'login']);
-        // }
-
-            
 
             $user = $this->Users->get($id, [
                 'contain' => [],
@@ -134,7 +127,7 @@ class UsersController extends AppController
                         $data["image"] = $fileName;
                     }
                 }
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('The user has been update successfully .'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -232,7 +225,7 @@ public function login()
             'action' => 'index',
         ]);
 
-        return $this->redirect($redirect);
+        return $this->redirect(['action'=>'index']);
     }
     // display error if user submitted and authentication failed
     if ($this->request->is('post') && !$result->isValid()) {
@@ -249,6 +242,9 @@ public function logout()
         return $this->redirect(['controller' => 'Users', 'action' => 'login']);
     }
 }
+public $paginate = [
+    'limit' => 5,
+    ];
 
 
 }

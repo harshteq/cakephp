@@ -54,32 +54,26 @@ class UsersTable extends Table
             ->scalar('name')
             ->maxLength('name', 255)
             ->requirePresence('name', 'create')
-            ->notEmptyString('name');
+            ->notEmptyString('name','please enter your name');
 
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmptyString('email');
+            ->notEmptyString('email','please enter your email');
 
         $validator
             ->scalar('password')
             ->maxLength('password', 255)
             ->requirePresence('password', 'create')
-            ->notEmptyString('password');
+            ->notEmptyString('password','please enter your email');
 
-            // $validator
-            // ->scalar('image')
-            // ->notEmptyFile('image')
-            // ->add('image',[
-            //     'mimeType'=>[
-            //         'rule'=>['mimeType',['image/jpg','image/png'] ],
-            //         'message'=>'please uplaod onlu jpg and png file',
-            //     ],
-            //     'filesize'=>[
-            //         'rule'=>['filesize','<=','1MB' ],
-            //         'message'=>'image file upload size must be less then 1 mb',
-            //     ]
-            // ]);
+            $validator
+            ->scalar('image')
+            ->requirePresence('image_file', 'create')
+            ->notEmptyFile('image_file','please upload a image');
+
+
+
 
 
         return $validator;
