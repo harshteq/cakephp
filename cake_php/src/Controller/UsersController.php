@@ -61,6 +61,10 @@ class UsersController extends AppController
             if (!$user->getErrors) {
 
                 $image = $this->request->getData('image_file');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
 
                 $name = $image->getClientFilename();
                                                                                                                  
