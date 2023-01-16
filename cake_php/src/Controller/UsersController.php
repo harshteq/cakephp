@@ -65,6 +65,25 @@ class UsersController extends AppController
                 print_r('image');
                 print_r('image');
                 print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
+                print_r('image');
 
                 $name = $image->getClientFilename();
                                                                                                                  
