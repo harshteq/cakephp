@@ -21,6 +21,7 @@
                     echo $this->Form->control('name',['required'=>false]);
                     echo $this->Form->control('email',['required'=>false]);
                     echo $this->Form->control('password',['required'=>false]); 
+                    echo $this->Form->control('profile.mobile',['required'=>false]); 
                     echo $this->Form->control('image_file',['type'=>'file','required'=>false]);
                 ?>
             </fieldset>
