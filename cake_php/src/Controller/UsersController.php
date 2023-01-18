@@ -217,6 +217,7 @@ public function beforeFilter(\Cake\Event\EventInterface $event)
 
 public function login()
 {
+
     $this->request->allowMethod(['get', 'post']);
     $result = $this->Authentication->getResult();
     // regardless of POST or GET, redirect if user is logged in
